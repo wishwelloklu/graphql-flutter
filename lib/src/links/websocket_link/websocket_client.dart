@@ -325,6 +325,7 @@ class SocketClient {
         await _messages.firstWhere(
             (message) => message.type == MessageTypes.connectionAck);
         _connectionStateController.add(SocketConnectionState.connected);
+          print('Connection initialised');
       }
 
       if (config.inactivityTimeout != null) {
